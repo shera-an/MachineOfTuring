@@ -1,4 +1,4 @@
-package main;
+package org.example;
 
 public class CaesarCipher {
     private static final String ALPHABET = "abcdefghijklmnopqrstuvwxyz" + "ABCDEFGHIJKLMNOPQRSTUVWXYZ" +
@@ -14,7 +14,6 @@ public class CaesarCipher {
 
             if(index >= 0){
                 int newIndex = (index + key) % ALPHABET.length();
-//                char newChar = newIndex < 0 ? ALPHABET.charAt(newIndex + ALPHABET.length()) : ALPHABET.charAt(newIndex);
                 char newChar =  ALPHABET.charAt(newIndex + (newIndex < 0 ? ALPHABET.length() : 0));
                 result.append(newChar);
             }
